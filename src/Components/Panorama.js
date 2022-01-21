@@ -16,7 +16,14 @@ const Panorama = ({ img, yawPitch }) => {
           console.log("panorama loaded");
         }}
         hotspotDebug={true}
-      ></Pannellum>
+      >
+        <Pannellum.Hotspot
+          type="custom"
+          pitch={yawPitch[1]}
+          yaw={yawPitch[0] + 180}
+          text="Info Hotspot Text 4"
+        />
+      </Pannellum>
     </div>
   );
 };
